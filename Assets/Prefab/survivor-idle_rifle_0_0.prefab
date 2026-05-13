@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -6318238839757662837}
   - component: {fileID: 1357949649960617042}
   - component: {fileID: -2905877460921998649}
+  - component: {fileID: 6317098418241855244}
   m_Layer: 0
   m_Name: survivor-idle_rifle_0_0
   m_TagString: Untagged
@@ -171,3 +172,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   hitpoints: 10
+--- !u!114 &6317098418241855244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4797071826860862540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054ba74a678a5f5498b82cc3d1af44c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyVisibility
+  playerVisionCone: {fileID: 0}
+  hideHealthBarWhenInvisible: 1
+  healthBarObject: {fileID: 0}

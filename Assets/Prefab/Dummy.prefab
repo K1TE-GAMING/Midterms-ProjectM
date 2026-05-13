@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 814927171925921473}
   - component: {fileID: 5440811414523452101}
   - component: {fileID: 2938455963350390501}
+  - component: {fileID: 3454518798072282065}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Untagged
@@ -142,3 +143,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &3454518798072282065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200187063178810860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054ba74a678a5f5498b82cc3d1af44c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyVisibility
+  playerVisionCone: {fileID: 0}
+  hideHealthBarWhenInvisible: 1
+  healthBarObject: {fileID: 0}

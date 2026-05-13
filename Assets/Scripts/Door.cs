@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Door : MonoBehaviour
 {
@@ -10,6 +9,8 @@ public class Door : MonoBehaviour
     bool isfullyOpen = false;
 
     private float currentAngle = 0f;
+
+    private Collider2D doorCollider;
 
    public void StartOpening()
     {
@@ -22,7 +23,9 @@ public class Door : MonoBehaviour
 
     void Update()
     {
-      if (isOpening && !isfullyOpen)
+        UpdateDoorCollision();
+
+        if (isOpening && !isfullyOpen)
         {
             currentAngle = Mathf.Lerp(currentAngle, openAngle, Time.deltaTime * openSpeed);
 
@@ -36,4 +39,24 @@ public class Door : MonoBehaviour
         }
 
     }
-}
+
+    void UpdateDoorCollision()
+    {
+        // if door is closed it soild so player and other objects can't pass through it, but when it's open it becomes non-solid so player can pass through it untill it stops opening and becomes solid again
+       
+        if (currentAngle < 15f)
+        {
+            if (doorCollider == null)
+                doorCollider = GetComponent<Collider2D>();
+            if (!doorCollider.enabled)
+                doorCollider.enabled = true;
+        }
+        else
+        {
+            if (doorCollider != null && doorCollider.enabled)
+                doorCollider.enabled = false;
+        }
+    }
+ }
+
+
